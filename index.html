@@ -3,58 +3,166 @@
   <head>
     <meta charset="utf-8">
     <title>Cryptohagen - Lær kryptering i København</title>
-    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="css/cryptohagen.min.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Cryptohagen - <small>Lær kryptering i København!</small>
-        </h1>
+
+    <nav class="navbar navbar-static-top navbar-fixed-top cryptohagen-navbar">
+      <div class="navbar-brand pull-xs-right">
+        Lær kryptering i København!      
       </div>
-      <div class="row">
-        <div class="col-md-8">
-          <h3>Hvem er det for?</h3>
-          <p>
-            Cryptohagen er uformelle og hyggelige søndage (hver sidste i måneden), hvor du kan lære at kryptere, og dermed sikre, din kommunikation på internettet.
-          </p>
+      <a class="navbar-brand" href="/">
+        Cryptohagen
+      </a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Hvem</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#when">Hvornår</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#where">Hvor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#links">Links</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Hvem er det for?</h1>
+            <hr>
             <p>
-              Alle er velkomne, uanset erfaringsniveau eller tekniske kundskaber. Har du brug for hjælp til at komme i gang med at kryptere dine emails? Så er Cryptohagen stedet, du kan lære det. Eller måske ved du alt om GnuPG, eller hvordan man får OTR til at virke over IRC? Så skal du også være velkommen til at dukke op og hjælpe andre i gang.
+              Cryptohagen er uformelle og hyggelige søndage (hver sidste i måneden), hvor du kan lære at kryptere, og dermed sikre, din kommunikation på internettet.
             </p>
-            <p>
-              Hvem ved, måske er det dig, der i næste måned sidder og hjælper nye i gang med de ting, du selv lærte på Cryptohagen :-)
-            </p>
-            <p>Det eneste, du skal have med er godt humør og din bærbare.</p>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              Næste Cryptohagen
-            </div>
-            <div class="panel-body">
-              <h3>Søndag d. 26. juni 2016</h3>
-                <p>
-                  Cryptohagen løber af stablen igen! 
-                  Vi sidder i <a href="https://www.ms.dk/mellemrummet">Mellemrummet</a>! 
-                  Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!
-                </p>
-                <p>
-                  <strong>Tidspunkt</strong><br />
-                  13:00-17:00
-                </p>
-                <p>
-                  <address>
-                    <strong>Adresse</strong> <br />
-                    <a href="http://findvej.dk/Ravnsborggade 11,2200">
-                      Ravnsborggade 11<br />
-                      2200 København Nørrebro<br />
-                    </a>
-                  </address>
-                </p>
-              </div>
+              <p>
+                Alle er velkomne, uanset erfaringsniveau eller tekniske kundskaber. Har du brug for hjælp til at komme i gang med at kryptere dine emails? Så er Cryptohagen stedet, du kan lære det. Eller måske ved du alt om GnuPG, eller hvordan man får OTR til at virke over IRC? Så skal du også være velkommen til at dukke op og hjælpe andre i gang.
+              </p>
+              <p>
+                Hvem ved, måske er det dig, der i næste måned sidder og hjælper nye i gang med de ting, du selv lærte på Cryptohagen :-)
+              </p>
+              <p>Det eneste, du skal have med er godt humør og din bærbare.</p>
             </div>
           </div>
       </div>
-    </div>
-  <script src="bootstrap.min.js"></script>
+    </section>
+    <section id="intro">
+     
+      <div class="container">
+        <h1>Næste gang!</h1>
+        <hr>
+      
+        <div class="card-columns">
+
+          <div class="card card-inverse card-primary">
+            <div class="card-block">
+              <h5 class="card-title">Søndag d. 31. juli 2016</h5>
+              <p class="card-text">
+                Cryptohagen løber af stablen igen! 
+                Vi sidder i <strong>Mellemrummet</strong>! 
+                Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!
+              </p>
+              <p class="card-text">
+                <strong>Tidspunkt</strong><br />
+                13:00-17:00
+              </p>
+            </div>
+          </div>
+
+          <div class="card card-inverse card-warning">
+            <div class="card-block">
+              <h4 class="card-title">Søndag d. 28. august 2016</h4>
+              <p class="card-text">
+                Cryptohagen løber af stablen igen! 
+                Vi sidder i <strong>Mellemrummet</strong>! 
+                Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!
+              </p>
+              <p class="card-text">
+                <strong>Tidspunkt</strong><br />
+                13:00-17:00
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="where">
+      <div class="container">
+      
+        <h1>Her er vi!</h1>
+        <hr>
+      
+        <div id="Map" style="height:250px"></div>
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+        <script>
+            var lat            = 55.6886382;
+            var lon            = 12.5618443;
+            var zoom           = 18;
+
+            var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+            var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+            var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+            map = new OpenLayers.Map("Map");
+            var mapnik         = new OpenLayers.Layer.OSM();
+            map.addLayer(mapnik);
+
+            var markers = new OpenLayers.Layer.Markers( "Markers" );
+            map.addLayer(markers);
+            markers.addMarker(new OpenLayers.Marker(position));
+
+            map.setCenter(position, zoom);
+        </script>
+
+          <p>
+          <address>
+            <strong>Adresse</strong> <br />
+              <a href="https://www.ms.dk/mellemrummet">Mellemrummet</a><br />
+              Ravnsborggade 11<br />
+              2200 København Nørrebro
+          </address>
+        </p>
+
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="container">
+      
+        <h1>Links!</h1>
+        <hr>
+
+        <ul>
+          <li>
+            <a href="https://prism-break.org/en/" target="_blank">Prism Break</a>: Nice samling af privatlivssikrede alternativer til populær (men problematisk) software
+          </li>
+          <li>
+            <a href="https://www.eff.org" target="_blank">Electronic Frontier Foundation (EFF)</a>
+          </li>
+          <li>
+            <a href="https://certbot.eff.org/" target="_blank">EFF's Cert Bot</a> - Nem vejledning til at få Lets Encrypt på alle slags servere og operativssystemer.
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+<footer>
+
+  <div class="container">
+    <a href="https://github.com/cryptohagen/cryptohagen.github.io" target="_blank">Add stuff or improve this stack-less website on Github</a>
+  </div>
+
+</footer>
+
+
   </body>
 </html>

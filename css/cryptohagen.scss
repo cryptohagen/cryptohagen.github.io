@@ -1,0 +1,55 @@
+$font-family-sans-serif: monospace;
+$font-family-serif: monospace;
+$font-family-monospace: monospace;
+$font-family-base: monospace;
+
+$brand-primary:             #541C41;
+$brand-success:             #66CB62;
+$brand-info:                #339992;
+$brand-warning:             #BED47D;
+$brand-danger:              #B4763C;
+
+@import 'bootstrap/scss/bootstrap';
+
+.cryptohagen-navbar {
+  background-color: $brand-primary;
+  color: #fff;
+  .nav-link {
+    color: #fff;
+  }
+  .navbar-brand {
+    color: lighten($brand-primary, 40%);
+  }
+}
+
+body {
+  padding-top: 60px; /* Because of static topbar */
+}
+
+section {
+  margin-top: 40px;
+}
+
+.card-deck
+{
+  .card {
+    max-width: 33%;
+  }
+}
+
+.card-columns
+{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+
+footer
+{
+  background: $brand-info;
+  margin-top: 50px;
+  padding: 20px;
+  a {
+    color: #FFF;
+  }
+}
