@@ -4567,11 +4567,11 @@ a.bg-danger:focus, a.bg-danger:hover {
     color: #cf6eae; }
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
   /* Because of static topbar */ }
 
 section {
-  margin-top: 40px; }
+  padding-top: 50px; }
 
 .card-deck .card {
   max-width: 33%; }
