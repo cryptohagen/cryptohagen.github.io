@@ -1,0 +1,183 @@
+{% assign title = 'title_' | append: page.language %}
+
+{% assign menu_tagline = 'menu_tagline_' | append: page.language %}
+{% assign menu_item_1 = 'menu_item_1_' | append: page.language %}
+{% assign menu_item_2 = 'menu_item_2_' | append: page.language %}
+{% assign menu_item_3 = 'menu_item_3_' | append: page.language %}
+
+{% assign section_who_title = 'section_who_title_' | append: page.language %}
+{% assign section_who = 'section_who_' | append: page.language %}
+
+{% assign section_events_title = 'section_events_title_' | append: page.language %}
+{% assign section_events_time = 'section_events_time_' | append: page.language %}
+
+{% assign section_where_title = 'section_where_title_' | append: page.language %}
+{% assign section_where_address = 'section_where_address_' | append: page.language %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ site.data.strings[title] }}</title>
+    <link rel="stylesheet" href="css/cryptohagen.min.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-static-top navbar-fixed-top cryptohagen-navbar">
+      <div class="navbar-brand pull-xs-right">
+        {{ site.data.strings[menu_tagline] }}
+      </div>
+      <a class="navbar-brand" href="/">
+        Cryptohagen
+      </a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">{{ site.data.strings[menu_item_1] }}</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#when">{{ site.data.strings[menu_item_2] }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#where">{{ site.data.strings[menu_item_3] }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#links">Links</a>
+        </li>
+        <li>
+            {% if page.language == 'da' %}
+                <a href="index_en.html" alt="English">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12" style="margin: 13px 0 0 13px;">
+                    <clipPath id="t">
+                    	<path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
+                    </clipPath>
+                    <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#cf142b" stroke-width="4"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                    <path d="M30,0 v30 M0,15 h60" stroke="#cf142b" stroke-width="6"/>
+                    </svg>
+                </a>
+            {% else %}
+                <a href="index.html" alt="Danish">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="1 1 37 28" style="margin: 10px 0 0 13px;">
+                        <rect width="40" height="30" fill="#C60C30"/>
+                        <g stroke="#fff" stroke-width="4"><line x1="15" y1="0" x2="15" y2="30"/><line x1="0" y1="15" x2="40" y2="15"/></g>
+                    </svg>
+                </a>
+            {% endif %}
+
+        </li>
+      </ul>
+    </nav>
+
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h1>{{ site.data.strings[section_who_title] }}</h1>
+            <hr>
+            {% for paragraph in site.data.strings[section_who] %}
+                <p>{{ paragraph }}</p>
+            {% endfor %}
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="when">
+        <div class="container">
+        <h1>{{ site.data.strings[section_events_title] }}</h1>
+        <hr>
+
+        <div class="card-columns">
+
+            {% for event in site.data.events %}
+            <div class="card card-inverse {% if event.current %}card-primary{% else %}card-info{% endif %}">
+              <div class="card-block">
+                <h4 class="card-title">{{ event.title }}</h4>
+                <p class="card-text">
+                  {{ event.text }}
+                </p>
+                <p class="card-text">
+                  <strong>{{ site.data.strings[section_events_time] }}</strong><br />
+                  {{ event.time }}
+                </p>
+              </div>
+            </div>
+            {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+    <section id="where">
+        <div class="container">
+
+          <h1>{{ site.data.strings[section_where_title] }}</h1>
+          <hr>
+
+          <div id="Map" style="height:250px"></div>
+          <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
+          <script>
+              var lat            = 55.6886382;
+              var lon            = 12.5618443;
+              var zoom           = 18;
+
+              var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+              var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+              var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+              map = new OpenLayers.Map("Map");
+              var mapnik         = new OpenLayers.Layer.OSM();
+              map.addLayer(mapnik);
+
+              var markers = new OpenLayers.Layer.Markers( "Markers" );
+              map.addLayer(markers);
+              markers.addMarker(new OpenLayers.Marker(position));
+
+              map.setCenter(position, zoom);
+          </script>
+
+            <p>
+            <address>
+              <strong>{{ site.data.strings[section_where_address] }}</strong><br />
+                <a href="https://www.ms.dk/mellemrummet">Mellemrummet</a><br />
+                Ravnsborggade 11<br />
+                2200 København Nørrebro
+            </address>
+          </p>
+
+        </div>
+
+    </section>
+
+    <section id="links">
+      <div class="container">
+
+        <h1>Links:</h1>
+        <hr>
+
+        <ul>
+        {% for link in site.data.links %}
+            <li>
+                <a href="{{ link.url }}">{{ link.name }}</a>
+                {% if link.desc %}: {{ link.desc}}{% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <a href="https://github.com/cryptohagen/cryptohagen.github.io" target="_blank">
+            Add stuff or improve this stack-less website on Github
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

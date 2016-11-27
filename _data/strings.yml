@@ -1,0 +1,39 @@
+title_da: "Cryptohagen - Lær kryptering i København"
+title_en: "Cryptohagen - Learn to encrypt in Copenhagen"
+
+menu_tagline_da: "Lær kryptering i København"
+menu_tagline_en: "Learn to encrypt in Copenhagen"
+
+menu_item_1_da: "Hvem"
+menu_item_1_en: "Who"
+menu_item_2_da: "Hvornår"
+menu_item_2_en: "When"
+menu_item_3_da: "Hvor"
+menu_item_3_en: "Where"
+
+section_who_title_da: "Hvem er det?"
+section_who_title_en: "Who is it?"
+
+section_who_da:
+    - "Cryptohagen er uformelle og hyggelige søndage (hver sidste i måneden), hvor du kan lære at kryptere, og dermed sikre, din kommunikation på internettet."
+    - "Alle er velkomne, uanset erfaringsniveau eller tekniske kundskaber. Har du brug for hjælp til at komme i gang med at kryptere dine emails? Så er Cryptohagen stedet, du kan lære det. Eller måske ved du alt om GnuPG, eller hvordan man får OTR til at virke over IRC? Så skal du også være velkommen til at dukke op og hjælpe andre i gang."
+    - "Hvem ved, måske er det dig, der i næste måned sidder og hjælper nye i gang med de ting, du selv lærte på Cryptohagen :-)"
+    - "Det eneste, du skal have med er godt humør og din bærbare."
+
+section_who_en:
+    - "Cryptohagen are informal and cozy Sundays (the last one every month), where you can learn to encrypt and secure your communication on the internet."
+    - "Everyone is welcome, regardless of your experience and level of expertise. Do you need help getting started with encrypting your emails? Then Cryptohagen is the place to learn it. Or maybe you know everything about GnuPG, or do you know how to get OTR to work over IRC? Then feel free to show up and help others get started."
+    - "Who knows, maybe you will be the one to help others get started next month with something you learned at Cryptohagen :-)"
+    - "All you need to bring is your good mood and your laptop."
+
+section_events_title_da: "Næste gang:"
+section_events_title_en: "Next time:"
+
+section_events_time_da: "Tidspunkt:"
+section_events_time_en: "Time:"
+
+section_where_title_da: "Her er vi:"
+section_where_title_en: "We are here:"
+
+section_where_address_da: "Adresse"
+section_where_address_en: "Address"
