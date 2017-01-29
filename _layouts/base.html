@@ -94,9 +94,19 @@
             {% for event in site.data.events %}
             <div class="card card-inverse {% if event.current %}card-primary{% else %}card-info{% endif %}">
               <div class="card-block">
-                <h4 class="card-title">{{ event.title }}</h4>
+                <h4 class="card-title">
+                  {% if page.language == "en" %}
+                    {{ event.english_title }}
+                  {% else %}
+                    {{ event.danish_title }}
+                  {% endif %}
+                </h4>
                 <p class="card-text">
-                  {{ event.text }}
+                  {% if page.language == "en" %}
+                    {{ event.english_text }}
+                  {% else %}
+                    {{ event.danish_text }}
+                  {% endif %}
                 </p>
                 <p class="card-text">
                   <strong>{{ site.data.strings[section_events_time] }}</strong><br />
