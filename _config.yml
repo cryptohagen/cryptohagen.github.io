@@ -1,5 +1,6 @@
 # Build settings
 markdown: kramdown
+includes_dir: _sections
 
 gems: 
     - jekyll-feed
