@@ -1,7 +1,8 @@
 jekyll:
     image: jekyll/jekyll:pages
-    command: jekyll serve --watch --force_polling --incremental
+    command: jekyll serve --livereload --reload_port 35729
     ports:
         - 4000:4000
+        - 35729:35729
     volumes:
         - .:/srv/jekyll
