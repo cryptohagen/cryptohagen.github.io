@@ -2,6 +2,9 @@
 markdown: kramdown
 includes_dir: _sections
 
+sass:
+    style: compressed
+    
 gems: 
     - jekyll-feed
     - jekyll-sitemap
