@@ -1,0 +1,10 @@
+# Build settings
+markdown: kramdown
+
+gems: 
+    - jekyll-feed
+    - jekyll-sitemap
+exclude:
+    - Gemfile
+    - Gemfile.lock
+    - docker-compose.yml
