@@ -5,14 +5,14 @@
 {% assign menu_item_2 = 'menu_item_2_' | append: page.language %}
 {% assign menu_item_3 = 'menu_item_3_' | append: page.language %}
 
-{% assign section_who_title = 'section_who_title_' | append: page.language %}
-{% assign section_who = 'section_who_' | append: page.language %}
-
 {% assign section_events_title = 'section_events_title_' | append: page.language %}
 {% assign section_events_time = 'section_events_time_' | append: page.language %}
 
 {% assign section_where_title = 'section_where_title_' | append: page.language %}
 {% assign section_where_address = 'section_where_address_' | append: page.language %}
+
+{% capture section_who %}{% include who_{{page.language}}.md %}{% endcapture %}
+
 
 <!DOCTYPE html>
 <html>
@@ -74,11 +74,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <h1>{{ site.data.strings[section_who_title] }}</h1>
-            <hr>
-            {% for paragraph in site.data.strings[section_who] %}
-                <p>{{ paragraph }}</p>
-            {% endfor %}
+            {{ section_who | markdownify }}
             </div>
           </div>
       </div>
