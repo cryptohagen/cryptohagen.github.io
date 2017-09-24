@@ -7,3 +7,6 @@
 - name: "EFF's Cert Bot for LetsEncrypt"
   url: "https://certbot.eff.org"
   desc: "Free TLS certificates for your web site"
+- name: "CopenhagenSec"
+  url: "https://www.meetup.com/CopenhagenSec/"
+  desc: "A meetup group in Copenhagen about (advanced) IT security"
