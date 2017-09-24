@@ -48,7 +48,7 @@
                 <a href="index_en.html" alt="English">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="24" height="12" style="margin: 13px 0 0 13px;">
                     <clipPath id="t">
-                    	<path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
+                      <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
                     </clipPath>
                     <path d="M0,0 v30 h60 v-30 z" fill="#00247d"/>
                     <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
@@ -126,29 +126,47 @@
           <script src="https://openlayers.org/en/v4.3.3/build/ol.js" type="text/javascript"></script>
 
           <script>
-              var lat            = 55.6886382;
-              var lon            = 12.5618443;
-              var zoom           = 18;
+              var lat = 55.6886382;
+              var lon = 12.5618443;
+              var zoom = 18;
+              var position = ol.proj.fromLonLat([lon, lat]);
+              var positionFeature = new ol.Feature({
+                type: 'geoMarker',
+                geometry: new ol.geom.Point(position)
+              });
 
-              var fromProjection = new ol.Projection("EPSG:4326");   // Transform from WGS 1984
-              var toProjection   = new ol.Projection("EPSG:900913"); // to Spherical Mercator Projection
-              var position       = new ol.LonLat(lon, lat).transform( fromProjection, toProjection);
-
-              map = new ol.Map("Map");
-              var mapnik         = new ol.Layer.OSM();
-              map.addLayer(mapnik);
-
-              var markers = new ol.Layer.Markers( "Markers" );
-              map.addLayer(markers);
-              markers.addMarker(new ol.Marker(position));
-
-              map.setCenter(position, zoom);
+              var map = new ol.Map({
+                target: 'Map',
+                layers: [
+                  new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                  }),
+                  new ol.layer.Vector({
+                    source: new ol.source.Vector({
+                      features: [positionFeature]
+                    }),
+                    style: new ol.style.Style({
+                      image: new ol.style.Circle({
+                        fill: new ol.style.Fill({
+                          color: 'rgba(255,0,0,0.8)'
+                        }),
+                        radius: 10
+                      })
+                    })
+                  })
+                ],
+                view: new ol.View({
+                  center: position,
+                  zoom: zoom
+                }),
+                interactions: [], // No dragging or other funny biz
+              });
           </script>
 
             <p>
             <address>
               <strong>{{ site.data.strings[section_where_address] }}</strong><br />
-                <a href="https://www.ms.dk/mellemrummet">Mellemrummet</a><br />
+                <a href="https://www.ms.dk/mellemrummet">Cafe Mellemrummet</a><br />
                 Ravnsborggade 11<br />
                 2200 København Nørrebro
             </address>
@@ -184,6 +202,5 @@
       </div>
     </footer>
 
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
