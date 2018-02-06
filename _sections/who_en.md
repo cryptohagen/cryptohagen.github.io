@@ -23,5 +23,5 @@ computer and on your smartphone.
 
 So come on down and say hi, have a chat and a nice cup of coffee.
 
-All you need to bring is your laptop and/or smartphone and your good
-mood.
+All you need to bring is your good mood. If you would like technical
+help, you are more than welcome to bring your laptop or mobile device!

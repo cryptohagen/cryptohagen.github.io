@@ -27,5 +27,5 @@ din smartphone og på din computer.
 
 Så kom ned og sig hej, drik en kop lækker kaffe, og få en sludder.
 
-Det eneste, du skal have med er godt humør og din mobil og/eller
-bærbare.
+Det eneste, du skal have med er godt humør. Hvis du gerne vil have
+teknisk hjælp, så er du velkommen med din bærbare eller mobil!
