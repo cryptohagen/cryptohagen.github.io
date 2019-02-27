@@ -1,8 +1,10 @@
 # What is it
 
 ---
-Cryptohagen is a series of informal get-togethers (every last Sunday
-of the month).
+Cryptohagen is a series of informal get-togethers every last Sunday
+of the month in Copenhagen.
+
+There is a similar event in [Aarhus][cryptoaarhus]
 
 ## Who is it for
 
@@ -25,3 +27,5 @@ So come on down and say hi, have a chat and a nice cup of coffee.
 
 All you need to bring is your good mood. If you would like technical
 help, you are more than welcome to bring your laptop or mobile device!
+
+[cryptoaarhus]:https://cryptoaarhus.dk/index_en.html

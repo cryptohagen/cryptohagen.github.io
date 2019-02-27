@@ -1,8 +1,10 @@
 # Hvad er det
 
 ---
-Cryptohagen er en stribe uformelle og hyggelige sammenkomster (hver
-sidste søndag i måneden).
+Cryptohagen er en stribe uformelle og hyggelige sammenkomster som 
+afholdes i København hver sidste søndag i måneden.
+
+Der afholdes lignende arrangementer i [Aarhus][cryptoaarhus].
 
 ## Hvem er det for
 
@@ -29,3 +31,5 @@ Så kom ned og sig hej, drik en kop lækker kaffe, og få en sludder.
 
 Det eneste, du skal have med er godt humør. Hvis du gerne vil have
 teknisk hjælp, så er du velkommen med din bærbare eller mobil!
+
+[cryptoaarhus]:https://cryptoaarhus.dk
