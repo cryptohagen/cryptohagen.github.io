@@ -1,18 +1,18 @@
-- danish_title: "Søndag d. 24. februar 2019"
-  danish_text: "Vi sidder i <strong>Mellemrummet</strong>. Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!"
-  english_title: "Sunday February 24th 2019"
-  english_text: "We'll be at <strong>Mellemrummet</strong>, as usual. Come join us, drink a cup of good fair trade coffee and learn how to protect your privacy!"
-  time: "13:00-17:00"
-  current: true
 - danish_title: "Søndag d. 31. marts 2019"
   danish_text: "Vi sidder i <strong>Mellemrummet</strong>. Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!"
   english_title: "Sunday March 31st 2019"
   english_text: "We'll be at <strong>Mellemrummet</strong>, as usual. Come join us, drink a cup of good fair trade coffee and learn how to protect your privacy!"
   time: "13:00-17:00"
-  current: false
+  current: true
 - danish_title: "Søndag d. 28. april 2019"
   danish_text: "Vi sidder i <strong>Mellemrummet</strong>. Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!"
   english_title: "Sunday April 28th 2019"
+  english_text: "We'll be at <strong>Mellemrummet</strong>, as usual. Come join us, drink a cup of good fair trade coffee and learn how to protect your privacy!"
+  time: "13:00-17:00"
+  current: false
+- danish_title: "Søndag d. 26. maj 2019"
+  danish_text: "Vi sidder i <strong>Mellemrummet</strong>. Kom og drik god fairtradekaffe med os og lær at sikre dit privatliv på det vilde web!"
+  english_title: "Sunday May 26th 2019"
   english_text: "We'll be at <strong>Mellemrummet</strong>, as usual. Come join us, drink a cup of good fair trade coffee and learn how to protect your privacy!"
   time: "13:00-17:00"
   current: false
